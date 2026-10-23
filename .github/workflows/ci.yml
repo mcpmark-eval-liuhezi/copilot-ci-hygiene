@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Echo drill status
+        run: echo "CI drill: add-ci-pipeline pipeline executed successfully."
